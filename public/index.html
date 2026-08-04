@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgentConfig — CLI Tools</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23E56A4A'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-size='14' font-family='sans-serif' font-weight='700'%3EAC%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <div class="brand-mark">AC</div>
+        <div>
+          <h1>AgentConfig</h1>
+          <p>Endpoint &amp; API key cho CLI (9router-compatible)</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="global-bar" id="global-bar">
+      <h2>Cấu hình mặc định (Base URL + API Key)</h2>
+      <div class="form-grid cols-3">
+        <label class="field">Base URL / Endpoint
+          <input id="g-base" type="text" placeholder="http://127.0.0.1:20128/v1" autocomplete="off" />
+        </label>
+        <label class="field">API Key
+          <input id="g-key" type="text" placeholder="sk-..." autocomplete="off" />
+        </label>
+        <label class="field">Model mặc định
+          <input id="g-model" type="text" placeholder="claude-sonnet-4-6" autocomplete="off" />
+        </label>
+      </div>
+      <div class="actions">
+        <button class="btn btn-primary" id="btn-save-settings" type="button">Lưu settings</button>
+        <button class="btn" id="btn-apply-all" type="button">Apply tất cả CLI (writable)</button>
+        <button class="btn btn-ghost" id="btn-refresh" type="button">Làm mới trạng thái</button>
+      </div>
+    </section>
+
+    <div class="list-shell" id="list-shell">
+      <div class="section-title"><span class="icon">⌘</span> CLI Tools</div>
+      <div class="grid" id="tools-grid">
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+      </div>
+
+      <div style="height:1.5rem"></div>
+      <div class="section-title"><span class="icon">⛨</span> MITM Tools</div>
+      <p class="mitm-note">MITM cần full stack 9router (proxy TLS). AgentConfig chỉ liệt kê — cấu hình MITM trên dashboard 9router.</p>
+      <div class="grid" id="mitm-grid"></div>
+    </div>
+
+    <div class="detail-shell" id="detail-shell">
+      <button class="back" id="btn-back" type="button">← Back to CLI Tools</button>
+      <div class="detail-card" id="detail-card"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
