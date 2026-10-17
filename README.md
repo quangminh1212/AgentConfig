@@ -39,8 +39,8 @@ run.bat
 Or:
 
 ```bash
-npm install
-npm start
+pnpm install
+pnpm start
 ```
 
 Open: **http://127.0.0.1:20130**

@@ -58,7 +58,7 @@ export async function commandExists(cmd) {
   try {
     const command = isWin() ? `where ${cmd}` : `which ${cmd}`;
     const env = isWin()
-      ? { ...process.env, PATH: `${process.env.APPDATA}\\npm;${process.env.PATH}` }
+      ? { ...process.env, PATH: `${process.env.APPDATA}\\pnpm;${process.env.PATH}` }
       : process.env;
     await execAsync(command, { windowsHide: true, env });
     return true;

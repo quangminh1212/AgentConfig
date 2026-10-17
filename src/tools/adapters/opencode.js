@@ -28,7 +28,7 @@ export async function apply({ baseUrl, apiKey, model }) {
   let config = (await readJson(configPath())) || {};
   if (!config.provider) config.provider = {};
   const existing = config.provider[PROVIDER] || config.provider["9router"] || {
-    npm: "@ai-sdk/openai-compatible",
+    pnpm: "@ai-sdk/openai-compatible",
     options: {},
     models: {},
   };
