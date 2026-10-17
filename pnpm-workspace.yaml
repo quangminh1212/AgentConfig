@@ -1,7 +1,6 @@
-# pnpm project configuration.
+﻿# pnpm project configuration.
 # Required: pnpm >= 12 reads these settings only from this file, not from ~/.npmrc.
 # Single-package project: "packages: []" keeps pnpm from scanning parent directories.
-
 packages: []
 
 autoInstallPeers: true
@@ -19,3 +18,6 @@ allowBuilds:
   electron-winstaller: true
   bufferutil: true
   utf-8-validate: true
+  '@vercel/speed-insights': true
+  core-js: true
+  '@scarf/scarf': true
